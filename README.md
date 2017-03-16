@@ -47,23 +47,22 @@ Injects shellcode without prompting for confirmation. By default, Invoke-Shellco
 
 .EXAMPLE
 
-C:\PS> Invoke-Shellcode -ProcessId 4274
-Description
+ C:\PS> Invoke-Shellcode -ProcessId 4274
+
 -----------
 Inject shellcode into process ID 4274.
 
 .EXAMPLE
 
 C:\PS> Invoke-Shellcode
-Description
+
 -----------
 Inject shellcode into the running instance of PowerShell.
 
 .EXAMPLE
 
 C:\PS> Invoke-Shellcode -Shellcode @(0x90,0x90,0xC3)
-    
-Description
+
 -----------
 Overrides the shellcode included in the script with custom shellcode - 0x90 (NOP), 0x90 (NOP), 0xC3 (RET)
 Warning: This script has no way to validate that your shellcode is 32 vs. 64-bit!
