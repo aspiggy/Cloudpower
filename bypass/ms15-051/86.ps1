@@ -851,7 +851,7 @@ Param(
 	
 	[Parameter(Position = 5)]
 	[String]
-	$ProcName =,
+	$ProcName,
 
     [Parameter(Position = 6)]
     [Switch]
