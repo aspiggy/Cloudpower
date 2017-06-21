@@ -819,22 +819,22 @@ function Invoke-ReflectivePEInjection
 
 [CmdletBinding(DefaultParameterSetName="WebFile")]
 Param(
-	[Parameter(ParameterSetName = "LocalFile", Position = 0, Mandatory = $true)]
+	[Parameter(ParameterSetName = "LocalFile", Position = 0, Mandatory = $false)]
 	[String]
-	$PEPath = 'Void',
+	$PEPath,
 	
-	[Parameter(ParameterSetName = "WebFile", Position = 0, Mandatory = $true)]
+	[Parameter(ParameterSetName = "WebFile", Position = 0, Mandatory = $false)]
 	[Uri]
-	$PEUrl = 'Void',
+	$PEUrl,
 
-    [Parameter(ParameterSetName = "Bytes", Position = 0, Mandatory = $true)]
+    [Parameter(ParameterSetName = "Bytes", Position = 0, Mandatory = $false)]
     [ValidateNotNullOrEmpty()]
     [Byte[]]
     $PEBytes = [System.Convert]::FromBase64String($InputString),
 	
 	[Parameter(Position = 1)]
 	[String[]]
-	$ComputerName = 'Void',
+	$ComputerName,
 	
 	[Parameter(Position = 2)]
     [ValidateSet( 'WString', 'String', 'Void' )]
@@ -851,7 +851,7 @@ Param(
 	
 	[Parameter(Position = 5)]
 	[String]
-	$ProcName = 'Void',
+	$ProcName =,
 
     [Parameter(Position = 6)]
     [Switch]
