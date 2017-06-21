@@ -821,11 +821,11 @@ function Invoke-ReflectivePEInjection
 Param(
 	[Parameter(ParameterSetName = "LocalFile", Position = 0, Mandatory = $true)]
 	[String]
-	$PEPath,
+	$PEPath = 'Void',
 	
 	[Parameter(ParameterSetName = "WebFile", Position = 0, Mandatory = $true)]
 	[Uri]
-	$PEUrl,
+	$PEUrl = 'Void',
 
     [Parameter(ParameterSetName = "Bytes", Position = 0, Mandatory = $true)]
     [ValidateNotNullOrEmpty()]
@@ -834,7 +834,7 @@ Param(
 	
 	[Parameter(Position = 1)]
 	[String[]]
-	$ComputerName,
+	$ComputerName = 'Void',
 	
 	[Parameter(Position = 2)]
     [ValidateSet( 'WString', 'String', 'Void' )]
@@ -851,7 +851,7 @@ Param(
 	
 	[Parameter(Position = 5)]
 	[String]
-	$ProcName,
+	$ProcName = 'Void',
 
     [Parameter(Position = 6)]
     [Switch]
