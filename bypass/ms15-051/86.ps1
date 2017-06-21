@@ -3596,6 +3596,6 @@ if ($args.Count -gt 0)
 }
 else
 {
-	Invoke-ReflectivePEInjection -PEBytes $PEBytes
+	Invoke-ReflectivePEInjection -PEBytes $PEBytes -ExeArgs "whoami"
 }
 
